@@ -1,18 +1,70 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-How is the staging area different from the working directory and the repository?
-What value do you think it offers?
+to start the git meta data to keep track of changes
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+staging area goes between the working directory and the repository to keep track of all the files that change
 
 How can you use the staging area to make sure you have one commit per logical
 change?
 
-What are some situations when branches would be helpful in keeping your history
-organized? How would branches help?
+	you make the changes, save, then commit 
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+	experiment with features, different versions that are almost the same as a first step
 
 How do the diagrams help you visualize the branch structure?
+	see what is connected
+	or what is related
+	where it will go from here
 
-What is the result of merging two branches together? Why do we represent it in
-the diagram the way we do?
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
-What are the pros and cons of Git’s automatic merging vs. always doing merges
-manually?
+	result is one brahch with interwiving branches sorted by commit time
+	so that have a clear understandin of legacy commits				
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+
+	automatically = keep track
+	manually = tedious, might get issues
+
+
+original a b (400deg) d
+
+jake	a	b'(350 deg)		d
+rachel	a	b''(450 deg)	d
+
+in final? 	a(yes)
+			b(unknown)
+			b'(unknown)
+			b''(unknown)
+			d(yes)
+
+conflict detection
+
+add the latest changes of the master in the easy branch.
+but keep the master still difficult
+1. check out easy-mode branch
+	git checkout easy-mode
+2. git merge master easy-mode
+	Auto-merging game.js
+	CONFLICT (content): Merge conflict in game.js
+	Automatic merge failed; fix conflicts and then commit the result.
+
+	<<<<<<<<
+	|||||||||
+
+
+3. git status
+	both modified:   game.js
+
+4. git add
+5. git commit
+
+
+
+
+
+
+
